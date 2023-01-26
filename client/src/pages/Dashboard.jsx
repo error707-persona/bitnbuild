@@ -14,7 +14,9 @@ const Dashboard = () => {
       <Navbar />
       <br />
       <Header />
+
       <div className="container">
+
         <div className="grid-item">
           <div className="grid-item__number">3432</div>
           <div className="grid-item__title">New Orders</div>
@@ -39,68 +41,86 @@ const Dashboard = () => {
           <div className="grid-item__number">343</div>
           <div className="grid-item__title">Low Stocks</div>
         </div>
+
       </div>
 
       <div className="main-container">
         <div className="main-container__title">Stocks Available</div>
-       
-       {/* <LineChart/> */}
-       {/* <BarChart/> */}
-       
+
+        {/* <LineChart/> */}
+        {/* <BarChart/> */}
       </div>
 
       <div className="bottom-container">
+
         <div className="bottom-container__item">
-          <DoughnutChart/>
+          <span className="recent-logs__title">Earnings</span>
+          <DoughnutChart />
         </div>
+
         <div className="bottom-container__item">
-          <LineChart/>
+          <span className="recent-logs__title">Inventory Carrying Cost</span>
+          <LineChart />
         </div>
+
         <div className="bottom-container__item">
-          <PolarAreaChart/>
+          <span className="recent-logs__title">Perished disposables</span>
+          <PolarAreaChart />
         </div>
+
       </div>
+
       <div className="recent-logs">
+
         <div className="recent-logs__item">
           <span className="recent-logs__title"></span>
-          <RadarChart/>
+          <RadarChart />
         </div>
+
         <div className="recent-logs__item">
           <br />
           <span className="recent-logs__title">Recent logs</span>
           <div className="outer-wrapper">
-          <div className="table-wrapper">
-          <table className="recent-logs__table">
-            <thead>
-              <th>Sr no.</th>
-              <th>Activity</th>
-              <th>Date</th>
-              <th>time</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Added mushrooms</td>
-                <td>12-09-20</td>
-                <td>20:10</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Discarded expired mushrooms</td>
-                <td>12-09-20</td>
-                <td>20:10</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Added new type of mushrooms</td>
-                <td>12-09-20</td>
-                <td>20:10</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
+            <div className="table-wrapper">
+              <table className="recent-logs__table">
+                <thead>
+                  <th>Sr no.</th>
+                  <th>Activity</th>
+                  <th>Date</th>
+                  <th>time</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Added mushrooms</td>
+                    <td>12-09-20</td>
+                    <td>20:10</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Discarded expired mushrooms</td>
+                    <td>12-09-20</td>
+                    <td>20:10</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Added new type of mushrooms</td>
+                    <td>12-09-20</td>
+                    <td>20:10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
+        
+      </div>
+      <div className="stock-availaible">
+        <div className="main-container__title">Stocks Available</div>
+       
+       {/* <LineChart/> */}
+       <BarChart/>
+       
       </div>
     </div>
   );
