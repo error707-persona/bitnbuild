@@ -1,0 +1,418 @@
+.landing-body{
+    font-family: 'Press Start 2P', cursive;
+    height: 100%;
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    background-color: #548CFF;  
+    position: fixed;
+  }
+  
+  .sky{
+    position: relative; /*Because we want to position items on and in them!*/
+    background-color: #548CFF;
+    width: 100%;
+    height: 90%;
+  }
+
+  .ground{ 
+    height: 10%;
+    background-color: #C84C0C; 
+    background-image: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/groundblock.png');
+    position: fixed;
+    bottom:0px;
+    width:100%;
+  }
+  .scorebar{    
+    position: absolute;
+    height: 120px;
+    width:100%;    
+    
+        font-family: 'Press Start 2P', cursive;
+        font-size: 180%;
+        color: white;
+    
+    padding-left: 50px;
+    padding-right: 50px;
+    top:20px;
+    line-height: 0.2;
+  }
+  .cloud{
+    position: absolute;
+    height: 100px;
+    
+  }
+    .cloud:nth-child(5){
+        top: 140px; 
+        -webkit-animation: wind 75s both infinite linear reverse; 
+                animation: wind 75s both infinite linear reverse;
+    }
+    .cloud:nth-child(3){
+        top: 280px;
+        -webkit-animation: wind 50s both infinite linear reverse;
+                animation: wind 50s both infinite linear reverse;
+    }
+    .cloud:nth-child(4){
+        top: 450px;
+        -webkit-animation: wind 30s both infinite linear reverse;
+                animation: wind 30s both infinite linear reverse;
+    }
+  
+  .skyblocks{
+    position: absolute;   
+    top: -250px;
+  }
+    .brick{     
+        position: fixed;        
+        margin: -2px;
+    }
+        .brick:nth-child(1){
+            left:600px;
+        } 
+        .brick:nth-child(2){
+            left:670px;
+        } 
+        .brick:nth-child(3){
+            left:740px;
+        } 
+        .brick:nth-child(4){
+            left:810px;
+        } 
+  
+    
+  
+  
+  .bush{
+    position: absolute;
+    top:-70px;
+  }
+    .bush:nth-child(1){
+        left: 150px;   
+    }
+    .bush:nth-child(2){
+        left: 900px;;   
+    }
+    .bush:nth-child(3){
+        left: 1500px;;   
+    }
+  
+  .marioman{
+    position: fixed;
+    width: 71px;
+    height: 72px;
+    background: url('https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/mariowalking/result.png') left center;    
+    bottom:10%;
+    left:0px;
+    
+    -webkit-animation: play 0.8s steps(4) infinite,
+                run 7s both infinite linear;
+    
+            animation: play 0.8s steps(4) infinite,
+                run 7s both infinite linear;
+  }
+  
+  .topline-mario{position:absolute;}
+              .topline-world{position:absolute; left:55%;}
+              .topline-time{position:absolute; left: 85%;}
+              .bottomline-score{position:absolute; top: 90px;}
+              .bottomline-coin{position:absolute; top: 80px; left:30%;}
+              .bottomline-world{position:absolute; top: 90px; left:55.7%;}
+              .bottomline-time{position:absolute; top: 90px; left:85.5%;}
+  
+  
+  /* audio and buttons */
+  
+  .flexbox{
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;  
+  }
+  
+  div.mario {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position:absolute;
+    margin:300px auto 0  auto;
+    width:100%;
+  }
+  
+  div.mario span.coin {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    opacity: 0;
+  }
+  div.mario span.coin2 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+    opacity: 0;
+  }
+  .landing-button {
+    width: 300px;
+    height: 80px;
+    background-color: #bf4d0f;
+    font-size: 25px;
+    border: none;
+    font-family: "Press Start 2P", cursive;
+    color: aliceblue;
+    /* background-image: url("https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Bricks.gif");
+    background-size: contain; */
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a00ea7f9-b891-4daf-a320-b0b407bb64a8/dek10rd-bdf8fd79-f74d-4d82-b078-afdcc1bd9f25.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EwMGVhN2Y5LWI4OTEtNGRhZi1hMzIwLWIwYjQwN2JiNjRhOFwvZGVrMTByZC1iZGY4ZmQ3OS1mNzRkLTRkODItYjA3OC1hZmRjYzFiZDlmMjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vOEto9RuK4l-P62MauwCVQh8bdzfQDDhY17GSAtdTME");
+    background-size: contain;
+    text-shadow: 5px 2px#000000;
+    box-shadow: 5px 3px#000000;
+  }
+  div.mario div.box {
+    position: relative;
+    width: 300px;
+    height: 80px;
+    margin-right: 18%;
+    margin-left: 18%;
+    z-index: 1;
+    transition: margin-top 0.2s;
+    cursor: pointer;
+    background-image: url("http://adobewordpress.com/tasarim/images/box.png");
+    background-position: 0 0;
+  }
+  
+  div.mario div.box.empty {
+    background-image: url("http://adobewordpress.com/tasarim/images/box.png");
+    background-position: 150px 0;
+    margin-top: 0;
+    cursor: not-allowed;
+  }
+  
+  div.mario span.coin img {
+    transition: opacity 0.3s ease-out;
+  }
+  
+  div.mario span.coin.play {
+    transition: all 0.5s ease-out;
+    -webkit-animation-name: position;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: position;
+    -moz-animation-duration: 800ms;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: position;
+    -ms-animation-duration: 800ms;
+    -ms-animation-timing-function: linear;
+    animation-name: position;
+    animation-duration: 800ms;
+    animation-timing-function: linear;
+  }
+  
+  div.mario span.coin.play img {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 400ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 400ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  div.mario span.coin2 img {
+    transition: opacity 0.3s ease-out;
+  }
+  
+  div.mario span.coin2.play {
+    transition: all 0.5s ease-out;
+    -webkit-animation-name: position;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: position;
+    -moz-animation-duration: 800ms;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: position;
+    -ms-animation-duration: 800ms;
+    -ms-animation-timing-function: linear;
+    animation-name: position;
+    animation-duration: 800ms;
+    animation-timing-function: linear;
+  }
+  
+  div.mario span.coin2.play img {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 400ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 400ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  @-moz-keyframes spin {
+    10% {
+      width: 90px;
+      height: 120px;
+    }
+    45% {
+      width: 3px;
+      height: 120px;
+    }
+    90% {
+      width: 90px;
+      height: 120px;
+    }
+  }
+  @-webkit-keyframes spin {
+    10% {
+      width: 90px;
+      height: 120px;
+    }
+    45% {
+      width: 3px;
+      height: 120px;
+    }
+    90% {
+      width: 90px;
+      height: 120px;
+    }
+  }
+  @keyframes spin {
+    10% {
+      width: 90px;
+      height: 120px;
+    }
+    45% {
+      width: 3px;
+      height: 120px;
+    }
+    90% {
+      width: 90px;
+      height: 120px;
+    }
+  }
+  
+  @-moz-keyframes position {
+    10% {
+      margin-top: -100px;
+      opacity: 0;
+    }
+    25% {
+      margin-top: -130px;
+      opacity: 1;
+    }
+    85% {
+      margin-top: -180px;
+    }
+    90% {
+      margin-top: -200px;
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes position {
+    10% {
+      margin-top: -100px;
+      opacity: 0;
+    }
+    25% {
+      margin-top: -130px;
+      opacity: 1;
+    }
+    85% {
+      margin-top: -180px;
+    }
+    90% {
+      margin-top: -200px;
+      opacity: 0;
+    }
+  }
+  @keyframes position {
+    10% {
+      margin-top: -100px;
+      opacity: 0;
+    }
+    25% {
+      margin-top: -130px;
+      opacity: 1;
+    }
+    85% {
+      margin-top: -180px;
+    }
+    90% {
+      margin-top: -200px;
+      opacity: 0;
+    }
+  }
+  
+  /* OFF-TOPIC */
+  a.link {
+    position: fixed;
+    bottom: 10px;
+    font: 300 26px "Sacramento", sans-serif;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  
+  
+  @-webkit-keyframes play{
+    100%{background-position: -284px;}
+  }
+  @keyframes play{
+    100%{background-position: -284px;}
+  }
+  @-webkit-keyframes run{
+    from{left: -200px;}
+    to{left: 100%;}
+  }
+  @keyframes run{
+    from{left: -200px;}
+    to{left: 100%;}
+  }
+  @-webkit-keyframes wind{
+    from{left: -300px;}
+    to{left: 100%;}
+  }
+  @keyframes wind{
+    from{left: -300px;}
+    to{left: 100%;}
+  }
+  
+  @media (max-width: 1008px) {
+    
+    .topline-world {
+      display: none;
+    }
+    .bottomline-coin{
+      display: none;
+    }
+    .bottomline-world{
+      display: none;
+    }
+    
+  }
+  @media (max-width: 1370px) {
+    .topline-time {
+      display: none;
+    }
+    .bottomline-time{
+      display: none;
+    }
+  }
+  

@@ -31,16 +31,16 @@ const Dashboard = () => {
       <Header />
       <div className="body-container">
       <div className="filter-container">
-        <select>
+        <Select>
           <option value="7">1 week</option>
           <option value="30">1 month</option>
           <option value="365">1 Year</option>
-        </select>
-        <select>
+        </Select>
+        <Select>
           <option value="mushroom">mushroom</option>
           <option value="candies">candies</option>
           <option value="burger">burger</option>
-        </select>
+        </Select>
         </div>
       <div className="container">
       

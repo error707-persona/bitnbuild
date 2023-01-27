@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import blocksound from "../assets/block-sound.mp3"
 import goldsound from "../assets/gold-sound.mp3"
-// import "../assets/css/style.css";
+import "../assets/styles/landing.css";
 
 const Scorebar = () => {
   return (
     <p>
-      <span className="topline-mario">MARIO</span>
+      <span className="topline-mario">MARIO</span>  
       <span className="topline-world">WORLD</span>
       <span className="topline-time">TIME</span>
       <span className="bottomline-score">OOOOOO</span>
@@ -109,7 +109,8 @@ const Landing = () => {
 
 
   return (
-    <div className="sky">
+    <div className='landing-body'>
+    <div className="sky" >
       <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
       <div className="scorebar">
         <Scorebar />
@@ -131,7 +132,7 @@ const Landing = () => {
           <span className={`coin ${isCoinClicked ? "play" : ""}`}>
             <img src="http://adobewordpress.com/tasarim/images/coin.png" />
           </span>
-          <button className="button">Admin Login</button>
+          <button className="landing-button">Admin Login</button>
         </div>
         <div
           className={`box ${isBoxEmpty ? "empty" : ""}`}
@@ -140,13 +141,14 @@ const Landing = () => {
           <span className={`coin2 ${isCoinClicked2 ? "play" : ""}`}>
             <img src="http://adobewordpress.com/tasarim/images/coin.png" />
           </span>
-          <button className="button">User Login</button>
+          <button className="landing-button">User Login</button>
         </div>
         </div>
         {sound && <iframe id="audio" title="blocksond" src={blocksound} allow="autoplay" style={{display: 'none'}}></iframe>}
         {sound2 && <iframe id="audio" title="goldsound" src={goldsound} allow="autoplay" style={{display: 'none'}}></iframe>}
       </div>
       </div>
+    </div>
     </div>
   );
 };

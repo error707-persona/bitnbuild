@@ -10,7 +10,8 @@ import DoughnutChart from './components/charts/DoughnutChart';
 function App() {
   return (
     <>
-    <Dashboard/>
+    {/* <Dashboard/> */}
+    <Landing/>
     {/* <DoughnutChart /> */}
       
     </>
