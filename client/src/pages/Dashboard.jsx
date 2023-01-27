@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 
@@ -7,16 +7,43 @@ import LineChart from "../components/charts/LineChart";
 import PolarAreaChart from "../components/charts/PolarAreaChart";
 import RadarChart from "../components/charts/RadarChart";
 import BarChart from "../components/charts/BarChart";
-
+// import { MenuItem, Select } from "@mui/material";
+import Select from 'react-select';
 const Dashboard = () => {
+  const colourOptions = ["Red", "blue", "green"];
+  const [isClearable, setIsClearable] = useState(true);
+  const [isSearchable, setIsSearchable] = useState(true);
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isRtl, setIsRtl] = useState(false);
+
+  // const Checkbox = ({ children, ...props }: JSX.IntrinsicElements['input']) => (
+  //   <label style={{ marginRight: '1em' }}>
+  //     <input type="checkbox" {...props} />
+  //     {children}
+  //   </label>
+  // );
+
   return (
     <div>
       <Navbar />
       <br />
       <Header />
-
+      <div className="body-container">
+      <div className="filter-container">
+        <select>
+          <option value="7">1 week</option>
+          <option value="30">1 month</option>
+          <option value="365">1 Year</option>
+        </select>
+        <select>
+          <option value="mushroom">mushroom</option>
+          <option value="candies">candies</option>
+          <option value="burger">burger</option>
+        </select>
+        </div>
       <div className="container">
-
+      
         <div className="grid-item">
           <div className="grid-item__number">3432</div>
           <div className="grid-item__title">New Orders</div>
@@ -44,12 +71,12 @@ const Dashboard = () => {
 
       </div>
 
-      <div className="main-container">
+      {/* <div className="main-container">
         <div className="main-container__title">Stocks Available</div>
 
         {/* <LineChart/> */}
-        {/* <BarChart/> */}
-      </div>
+        {/* <BarChart/> 
+      </div> */}
 
       <div className="bottom-container">
 
@@ -73,7 +100,7 @@ const Dashboard = () => {
       <div className="recent-logs">
 
         <div className="recent-logs__item">
-          <span className="recent-logs__title"></span>
+          <span className="recent-logs__title">Storage</span>
           <RadarChart />
         </div>
 
@@ -115,12 +142,14 @@ const Dashboard = () => {
         </div>
         
       </div>
+
       <div className="stock-availaible">
         <div className="main-container__title">Stocks Available</div>
        
        {/* <LineChart/> */}
        <BarChart/>
        
+      </div>
       </div>
     </div>
   );

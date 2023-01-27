@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import blocksound from "../assets/block-sound.mp3"
 import goldsound from "../assets/gold-sound.mp3"
-import "../assets/css/style.css";
+// import "../assets/css/style.css";
 
 const Scorebar = () => {
   return (
