@@ -23,6 +23,7 @@ function QrReader() {
     />
     <br/>
     <p>{QrResult}</p>
+    <button className="qrbutton">Add Manually</button>
     </div>
     </div>
   );
